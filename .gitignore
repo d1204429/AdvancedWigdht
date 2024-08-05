@@ -1,3 +1,4 @@
+
 # Gradle files
 .gradle/
 build/
@@ -31,3 +32,8 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+app/build.gradle.kts
+app/proguard-rules.pro
+build.gradle.kts
+gradle*
