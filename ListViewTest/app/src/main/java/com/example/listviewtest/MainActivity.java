@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         String[] citiesArray = getResources().getStringArray(R.array.cities);
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle("城市").setMessage("您選擇的是 : " + citiesArray[i]).setCancelable(true).show();
+        dialog.setPositiveButton("確定",null);
+        dialog.setNegativeButton("取消",null);
+        dialog.setNegativeButton("放棄",null);
+        dialog.show();
 
 
 //        dialog.setTitle("城市");
