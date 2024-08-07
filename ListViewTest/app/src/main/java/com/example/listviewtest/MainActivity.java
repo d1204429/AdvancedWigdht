@@ -3,6 +3,7 @@ package com.example.listviewtest;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,15 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
+
+    private ListView cityListView;
+    private List<String> cities = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +39,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         });
         //綁定 註冊Listener
         ListView lv = (ListView) findViewById(R.id.cityListView);
-        lv.setOnItemClickListener(this);
+        setCities();
+        cityListView.setOnItemClickListener(this);
+//        lv.setOnItemClickListener(this);
     }
 
+    //動態新增城市
+    private void setCities(){
+        cities = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.cities)));
+        cities.add("Hualien");
+        cities.add("Taitung");
+        cities.add("Changhua");
+        //new ArrayAdapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,cities);
+        cityListView.setAdapter(adapter);
+    }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
