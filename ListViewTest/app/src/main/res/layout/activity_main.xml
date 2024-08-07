@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/cityListView"
         android:layout_width="390dp"
         android:layout_height="372dp"
         android:entries="@array/cities"
@@ -19,12 +19,12 @@
         app:layout_constraintVertical_bias="0.504" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listView" />
+        app:layout_constraintTop_toBottomOf="@+id/cityListView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
