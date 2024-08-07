@@ -8,6 +8,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -37,11 +38,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         TextView tv = (TextView) findViewById(R.id.textView);
         String[] citiesArray = getResources().getStringArray(R.array.cities);
-        Toast.makeText(
-                this,
-                "您選擇的是 : " + citiesArray[i],
-                Toast.LENGTH_SHORT
-        ).show();
+        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+        dialog.setTitle("城市");
+        dialog.setMessage("您選擇的是 : " + citiesArray[i]);
+        dialog.setCancelable(true);
+        dialog.show();
+
+//        Toast.makeText(
+//                this,
+//                "您選擇的是 : " + citiesArray[i],
+//                Toast.LENGTH_SHORT
+//        ).show();
 
 //        tv.setText("您選擇的是 : " + citiesArray[i]);
 
