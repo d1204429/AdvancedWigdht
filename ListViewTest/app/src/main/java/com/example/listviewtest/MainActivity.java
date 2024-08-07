@@ -39,10 +39,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         TextView tv = (TextView) findViewById(R.id.textView);
         String[] citiesArray = getResources().getStringArray(R.array.cities);
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setTitle("城市");
-        dialog.setMessage("您選擇的是 : " + citiesArray[i]);
-        dialog.setCancelable(true);
-        dialog.show();
+        dialog.setTitle("城市").setMessage("您選擇的是 : " + citiesArray[i]).setCancelable(true).show();
+
+
+//        dialog.setTitle("城市");
+//        dialog.setMessage("您選擇的是 : " + citiesArray[i]);
+//        dialog.setCancelable(true);
+//        dialog.show();
 
 //        Toast.makeText(
 //                this,
