@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ListViewTest</string>
+    <string-array name="cities">
+        <item>Taipei</item>
+        <item>New Taipei</item>
+        <item>Taoyuan</item>
+        <item>Taichung</item>
+        <item>Tainan</item>
+        <item>Kasohsiung</item>
+    </string-array>
+
 </resources>
